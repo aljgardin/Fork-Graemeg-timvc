@@ -1,62 +1,71 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Package Version="3">
+  <Package Version="5">
     <PathDelim Value="\"/>
     <Name Value="laz_timvc"/>
+    <Type Value="RunTimeOnly"/>
+    <AddToProjectUsesSection Value="True"/>
     <CompilerOptions>
-      <Version Value="8"/>
+      <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <OtherUnitFiles Value="M:\DelphiProjects\D2009Projects\projects\CustomComponents\tiEventMVC\"/>
+        <IncludeFiles Value="..\src"/>
+        <OtherUnitFiles Value="..\src"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
-      <Parsing>
-        <SyntaxOptions>
-          <UseAnsiStrings Value="True"/>
-        </SyntaxOptions>
-      </Parsing>
-      <Other>
-        <CompilerPath Value="$(CompPath)"/>
-      </Other>
     </CompilerOptions>
-    <Files Count="5">
+    <Files Count="7">
       <Item1>
-        <Filename Value="..\mvc_base.pas"/>
-        <UnitName Value="mvc_base"/>
+        <Filename Value="..\src\lcl_controllers.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="lcl_controllers"/>
       </Item1>
       <Item2>
-        <Filename Value="..\widget_controllers.pas"/>
-        <UnitName Value="widget_controllers"/>
+        <Filename Value="..\src\mvc_base.pas"/>
+        <UnitName Value="mvc_base"/>
       </Item2>
       <Item3>
-        <Filename Value="..\mvc_events.pas"/>
-        <UnitName Value="mvc_events"/>
+        <Filename Value="..\src\mvc_criteria.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="mvc_criteria"/>
       </Item3>
       <Item4>
-        <Filename Value="..\lcl_controllers.pas"/>
-        <UnitName Value="lcl_controllers"/>
+        <Filename Value="..\src\mvc_events.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="mvc_events"/>
       </Item4>
       <Item5>
-        <Filename Value="..\mvc_criteria.pas"/>
-        <UnitName Value="mvc_criteria"/>
+        <Filename Value="..\src\tms_controllers.pas"/>
+        <UnitName Value="tms_controllers"/>
       </Item5>
+      <Item6>
+        <Filename Value="..\src\vcl_controllers.pas"/>
+        <UnitName Value="vcl_controllers"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\src\widget_controllers.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="widget_controllers"/>
+      </Item7>
     </Files>
-    <Type Value="RunAndDesignTime"/>
-    <RequiredPkgs Count="2">
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="3">
       <Item1>
-        <PackageName Value="tiOPF"/>
+        <PackageName Value="LCLBase"/>
       </Item1>
       <Item2>
+        <PackageName Value="tiOPF"/>
+      </Item2>
+      <Item3>
         <PackageName Value="FCL"/>
         <MinVersion Major="1" Valid="True"/>
-      </Item2>
+      </Item3>
     </RequiredPkgs>
     <UsageOptions>
       <UnitPath Value="$(PkgOutDir)"/>
     </UsageOptions>
     <PublishOptions>
       <Version Value="2"/>
-      <IgnoreBinaries Value="False"/>
     </PublishOptions>
   </Package>
 </CONFIG>

@@ -2,20 +2,14 @@
   This source is only used to compile and install the package.
  }
 
-unit laz_timvc; 
+unit laz_timvc;
 
+{$warn 5023 off : no warning about unused units}
 interface
 
 uses
-    mvc_base, widget_controllers, mvc_events, lcl_controllers, mvc_criteria, 
-  LazarusPackageIntf;
+  mvc_base, tms_controllers, vcl_controllers;
 
 implementation
 
-procedure Register; 
-begin
-end; 
-
-initialization
-  RegisterPackage('laz_timvc', @Register); 
 end.
